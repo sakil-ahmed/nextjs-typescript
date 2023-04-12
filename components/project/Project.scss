@@ -1,0 +1,50 @@
+@import "./../../styles/Variables";
+
+.portfolio {
+  position: relative;
+  padding: 100px 0;
+  border-bottom: 1px solid #ebebeb;
+
+  .title {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    @media ($phone_max) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+  .card__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .project__btns {
+    text-align: center;
+    margin-top: 40px;
+    a {
+      background: $btnColor;
+      color: $white;
+      display: inline-block;
+      font-weight: 600;
+      padding: 15px 45px;
+      border: 1px solid transparent;
+      text-transform: capitalize;
+      z-index: 1;
+      position: relative;
+      font-size: 16px;
+      transition: all 0.3s;
+      border-radius: 0;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        background: transparent;
+        color: $btnColor;
+        border: 1px solid $btnColor;
+      }
+    }
+  }
+}
