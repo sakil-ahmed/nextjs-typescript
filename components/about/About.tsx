@@ -19,18 +19,19 @@ const About = () => {
             <motion.h2 {...animationFade("bottom", 100)} className="title">
               Welcome to Sakil, Best Web Development Services
             </motion.h2>
-            <motion.h5 {...animationFade("bottom", 100)} className="sub_title">
-              I have 1+ years of experiences in web Development for give you
+            {/* <motion.h5 {...animationFade("bottom", 100)} className="sub_title">
+              I have 1.5+ years of experiences in web Development for give you
               better services.
-            </motion.h5>
+            </motion.h5> */}
             <motion.p {...animationFade("bottom", 100)} className="description">
-              A wonderful serenity has taken possession of my entire soul, like
-              these sweet mornings of spring which I enjoy with my whole heart.
-              I am alone, and feel the charm of existence in this spot, which
-              was created for the bliss of souls like mine. I am so happy, my
-              dear friend, so absorbed in the exquisite
+              As a front-end web developer, I am responsible for designing and
+              implementing the user interface of websites and web applications.
+              I have expertise in HTML, CSS, JavaScript, and javascript
+              libraries such as react js. I use these technologies to create
+              visually appealing and responsive web pages that provide a great
+              user experience.
             </motion.p>
-            <motion.div
+            {/* <motion.div
               {...animationFade("bottom", 100)}
               className="counter_container"
             >
@@ -54,7 +55,7 @@ const About = () => {
                 />
                 <span>Happy clients</span>
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>

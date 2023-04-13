@@ -3,7 +3,7 @@ import okiro from "./../../assets/okairo.png";
 import grover from "./../../assets/grover.png";
 import portfolio from "./../../assets/portfolio.webp";
 import startbox from "./../../assets/start.png";
-import flower from "./../../assets/Thumb.png";
+import dashboard from "./../../assets/deshboard.png";
 // skills image
 import react from "./../../assets/react.png";
 import nodejs from "./../../assets/node.png";
@@ -51,11 +51,11 @@ export const card = [
   },
   {
     id: 5,
-    img: flower,
+    img: dashboard,
     title: "",
     subTitle: "Choicest Flower Shop",
-    liveLink: "https://startbox.netlify.app",
-    repoLink: "",
+    liveLink: "https://admin-deshboard.netlify.app/",
+    repoLink: "https://github.com/sakil-ahmed/admin-dashboard/tree/main",
   },
   {
     id: 6,
