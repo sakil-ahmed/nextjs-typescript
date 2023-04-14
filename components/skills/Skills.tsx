@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { motion, stagger } from "framer-motion";
 import AnimatedLetters from "../AnimatedLetters/index";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { animationFade } from "../Animation/Motion";
 import SectionTitle from "../sectionTitle/SectionTitle";
 import { skillsData } from "@/public/data/CardData";
+
+interface techdata {
+  id: number;
+  img: StaticImageData;
+  text: string;
+}
 
 const Skills = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -28,7 +34,7 @@ const Skills = () => {
           </motion.h2>
         </div>
         <div className="technologies_container">
-          {skillsData.map(({ id, img, text }) => {
+          {skillsData.map(({ id, img, text }: techdata) => {
             return (
               <motion.div
                 initial="hidden"

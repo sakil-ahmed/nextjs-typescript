@@ -32,7 +32,7 @@ const Service = () => {
   }, []);
 
   return (
-    <section className="service section" id="services">
+    <section className="service section" id="service">
       <div className="content_wrap line">
         <SectionTitle text="Check Services" />
         <motion.h2 {...animationFade("bottom", 100)} className="service_title">

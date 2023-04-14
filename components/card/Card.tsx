@@ -2,9 +2,19 @@ import React from "react";
 import { HiEye } from "react-icons/hi";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const Card = ({ item: { id, img, subTitle, liveLink, repoLink } }: any) => {
+interface item {
+  item: {
+    id: number;
+    img: StaticImageData;
+    subTitle: string;
+    liveLink: string;
+    repoLink: string;
+  };
+}
+
+const Card = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
   return (
     <motion.div
       initial="hidden"
