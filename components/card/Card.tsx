@@ -24,7 +24,6 @@ const Card = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
         type: "spring",
         Bounce: 0.25,
         duration: 1,
-        delay: (0.2 * id) / 2,
       }}
       variants={{
         hidden: { opacity: 0, y: 100 },
