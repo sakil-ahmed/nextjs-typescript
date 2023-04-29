@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters/index";
-import img from "./../../assets/avater-removebg-preview.png";
+import img from "./../../assets/avatar.jpg";
 import Image from "next/image";
 
 const Hero = () => {
@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero__right__img animate__animated animate__fadeInRight">
-            <Image src={img} alt="" priority={true} width={305} />
+            <Image src={img} alt="Avater" priority={true} width={305} />
           </div>
         </div>
       </div>

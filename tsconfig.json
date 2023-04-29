@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/contact/form/Form.jsx"
+    "components/contact/form/Form.tsx"
   ],
   "exclude": ["node_modules"]
 }
