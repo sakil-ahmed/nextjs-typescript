@@ -45,17 +45,17 @@ const Header = () => {
             </div>
             <Menubar setIsMenuOpen={setIsMenuOpen} />
           </nav>
-          <div className="header__btn">
-            {/* <a className="resume__btn" href="Resume.pdf" download>
+          {/* <div className="header__btn">
+            <a className="resume__btn" href="Resume.pdf" download>
               Resume
-            </a> */}
+            </a>
             <Dropdown
               options={options}
               onChange={onSelect}
               value={defaultOption}
               placeholder="Select an option"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
