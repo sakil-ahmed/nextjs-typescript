@@ -1,26 +1,29 @@
 import React from "react";
 import Link from "next/link";
+import {useTranslation} from "react-i18next";
 
 const Navbar = ({ setIsMenuOpen }: any) => {
+  const {t} = useTranslation()
+  
   return (
     <ul className="nav__menu__items">
       <li onClick={() => setIsMenuOpen(false)}>
-        <Link href={"/"}>Home</Link>
+        <Link href={"/"}>{t("home")}</Link>
       </li>
       {/* <li onClick={() => setIsMenuOpen(false)}>
         <a href={"#about"}>About</a>
       </li> */}
       <li onClick={() => setIsMenuOpen(false)}>
-        <a href={"#skills"}>Skills</a>
+        <a href={"#skills"}>{t("skills")}</a>
       </li>
       {/* <li onClick={() => setIsMenuOpen(false)}>
         <a href={"#service"}>Service</a>
       </li> */}
       <li onClick={() => setIsMenuOpen(false)}>
-        <a href={"#portfolio"}>Portfolio</a>
+        <a href={"#portfolio"}>{t("portfolio")}</a>
       </li>
       <li onClick={() => setIsMenuOpen(false)}>
-        <a href={"#contact"}>Contact</a>
+        <a href={"#contact"}>{t("contact")}</a>
       </li>
     </ul>
   );

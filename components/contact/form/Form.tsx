@@ -8,9 +8,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { animationFade } from "@/components/Animation/Motion";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useTranslation } from "react-i18next";
 
 const Form = () => {
+  const { t } = useTranslation();
   const form: any = useRef();
+
+  const message = t("message");
 
   const schema = yup
     .object({
@@ -76,7 +80,7 @@ const Form = () => {
     <motion.form ref={form} onSubmit={handleSubmit(onSubmit)}>
       <motion.div {...animationFade("bottom", 100)} className="form__input">
         <div className="form_group">
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">{t("name")}*</label>
           <input type="text" placeholder="Your Name" {...register("name")} />
 
           <p className={`error__message show`}>
@@ -84,7 +88,7 @@ const Form = () => {
           </p>
         </div>
         <div className="form_group">
-          <label htmlFor="email">Email*</label>
+          <label htmlFor="email">{t("email")}*</label>
           <input type="text" placeholder="Your Email" {...register("email")} />
           <p className={`error__message show`}>
             {errors.email ? errors.email?.message : ""}
@@ -92,15 +96,16 @@ const Form = () => {
         </div>
       </motion.div>
       <motion.div {...animationFade("bottom", 100)} className="form_group">
-        <label htmlFor="message">Message*</label>
-        <textarea placeholder="Message" {...register("message")}></textarea>
+        <label htmlFor="message">{t("message")}*</label>
+
+        <textarea placeholder={message} {...register("message")}></textarea>
         <p className={`error__message show`}>
           {errors.message ? errors.message?.message : ""}
         </p>
       </motion.div>
       <motion.div {...animationFade("bottom", 100)} className="contact__btns">
         <button className="btn" type="submit">
-          Submit now
+          {t("submitnow")}
         </button>
         <div className="text">
           <span className="phone">

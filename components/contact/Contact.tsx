@@ -4,8 +4,10 @@ import AnimatedLetters from "../AnimatedLetters/index";
 import Form from "./form/Form";
 import { motion } from "framer-motion";
 import { animationFade } from "../Animation/Motion";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [letterClass, setLetterClass] = useState("text-animate");
   const Arrayname = "Send me a Message".split("");
 
@@ -35,7 +37,7 @@ const Contact = () => {
               {...animationFade("bottom", 100)}
               className="contact__description"
             >
-              Your email address will not be published. All fields are required
+              {t("Youremailaddresswillnotbepublished.Allfieldsarerequired")}
             </motion.p>
             <Form />
           </div>

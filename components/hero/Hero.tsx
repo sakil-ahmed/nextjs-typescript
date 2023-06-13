@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters/index";
 import img from "./../../assets/avatar.jpg";
 import Image from "next/image";
+import {useTranslation} from "react-i18next";
 
 const Hero = () => {
+  
+  const {t} = useTranslation()
+  
   const [letterClass, setLetterClass] = useState("text-animate");
   const jobArrayname = "Frontend Web".split("");
   const jobArray = "Developer".split("");
@@ -31,11 +35,11 @@ const Hero = () => {
               />
             </h2>
             <div className="subtitle__padding">
-              <h5 className="hero__subtitle">Sakil Ahmed</h5>
+              <h5 className="hero__subtitle">{t("sakilAhmed")}</h5>
             </div>
             <div className="btns">
               <a className="btn" href="#contact">
-                Contact Me
+                {t("contactMe")}
               </a>
             </div>
           </div>
@@ -45,7 +49,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="visible__text animate__animated animate__zoomIn">
-        <h1>Developer</h1>
+        <h1>{t("developer")}</h1>
       </div>
     </section>
   );

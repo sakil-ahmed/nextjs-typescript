@@ -5,8 +5,8 @@ import Menubar from "./navbar/Navbar";
 import logo from "./../../assets/logo.png";
 import Link from "next/link";
 import Image from "next/image";
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
+
+import ToggleLang from "@/components/Translation/ToggleLang";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,17 +45,8 @@ const Header = () => {
             </div>
             <Menubar setIsMenuOpen={setIsMenuOpen} />
           </nav>
-          {/* <div className="header__btn">
-            <a className="resume__btn" href="Resume.pdf" download>
-              Resume
-            </a>
-            <Dropdown
-              options={options}
-              onChange={onSelect}
-              value={defaultOption}
-              placeholder="Select an option"
-            />
-          </div> */}
+        
+          <ToggleLang/>
         </div>
       </div>
     </header>

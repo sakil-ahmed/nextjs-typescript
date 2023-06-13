@@ -5,7 +5,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import logo from "./../../assets/logo.png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer line">
       <div className="container">
@@ -39,7 +42,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="copyright__text">
-            <p>© 2023. All rights reserved by Sakil Ahmed.</p>
+            <p>{t("copyrighttext")}</p>
           </div>
         </div>
       </div>

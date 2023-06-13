@@ -136,3 +136,15 @@ h6 {
     border: 1px solid $btnColor;
   }
 }
+
+.Dropdown-option, .Dropdown-placeholder{
+  text-transform: uppercase;
+}
+.marquee-container{
+  overflow-x: unset !important;
+  &::-webkit-scrollbar{
+    height:0;
+  }
+}
+
+
