@@ -12,20 +12,26 @@ import {
   Service,
   Skills,
 } from "@/components";
+import Intro from "@/components/IntroTextAnimation/Intro";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     function handleScroll() {
       setScrollPosition(window.scrollY);
     }
-
     window.addEventListener("scroll", handleScroll);
+
+    const interval = setInterval(() => {
+      setIsLoading(false);
+    }, 4500);
 
     // Cleanup the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearInterval(interval);
     };
   }, []);
 
@@ -40,18 +46,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <Header />
-        <Hero />
-        <Marque />
-        {/* <About /> */}
-        <Skills />
-        {/* <Service /> */}
-        <Project />
-        <Contact />
-        <Footer />
-        <a className={`top__link ${showClass}`} href={"#header"}>
-          <BsArrowUpShort />
-        </a>
+        {isLoading ? (
+          <Intro />
+        ) : (
+          <>
+            <Header />
+            <Hero />
+            <Marque />
+            {/* <About /> */}
+            <Skills />
+            {/* <Service /> */}
+            <Project />
+            <Contact />
+            <Footer />
+            <a className={`top__link ${showClass}`} href={"#header"}>
+              <BsArrowUpShort />
+            </a>
+          </>
+        )}
       </main>
     </>
   );
