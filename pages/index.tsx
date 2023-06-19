@@ -12,20 +12,28 @@ import {
   Service,
   Skills,
 } from "@/components";
+import { Tooltip } from "react-tooltip";
+import Intro from "@/components/AnimatedIntro/Intro";
+import { FaReact } from "react-icons/fa";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isStatus, setIsStatus] = useState(true);
 
   useEffect(() => {
     function handleScroll() {
       setScrollPosition(window.scrollY);
     }
-
     window.addEventListener("scroll", handleScroll);
+
+    const interval = setInterval(() => {
+      setIsStatus(false);
+    }, 5000);
 
     // Cleanup the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearInterval(interval);
     };
   }, []);
 
@@ -40,18 +48,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <Header />
-        <Hero />
-        <Marque />
-        {/* <About /> */}
-        <Skills />
-        {/* <Service /> */}
-        <Project />
-        <Contact />
-        <Footer />
-        <a className={`top__link ${showClass}`} href={"#header"}>
-          <BsArrowUpShort />
-        </a>
+        <FaReact enableBackground="linear-gradient(to right, red , yellow)" />
+        {isStatus ? (
+          <Intro />
+        ) : (
+          <>
+            <Header />
+            <Hero />
+            <Marque />
+            {/* <About /> */}
+            <Skills />
+            {/* <Service /> */}
+            <Project />
+            <Contact />
+            <Footer />
+            <a
+              data-tooltip-id="top-link"
+              data-tooltip-content="Back To Top"
+              className={`top__link ${showClass}`}
+              href={"#header"}
+            >
+              <BsArrowUpShort />
+              <Tooltip id="top-link" />
+            </a>
+          </>
+        )}
       </main>
     </>
   );

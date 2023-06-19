@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
@@ -5,17 +6,13 @@ import Menubar from "./navbar/Navbar";
 import logo from "./../../assets/logo.png";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 import ToggleLang from "@/components/Translation/ToggleLang";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const options = ["En", "Bn"];
-
-  const onSelect = (e: any) => {
-    console.log(e.label);
-  };
-  const defaultOption = options[0];
+  const { theme, setTheme } = useTheme();
 
   return (
     <header className="header" id="header">
@@ -45,8 +42,14 @@ const Header = () => {
             </div>
             <Menubar setIsMenuOpen={setIsMenuOpen} />
           </nav>
-        
-          <ToggleLang/>
+          <div className="flex gap-5">
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? "light" : "dark"}
+            </button>
+            <ToggleLang />
+          </div>
         </div>
       </div>
     </header>

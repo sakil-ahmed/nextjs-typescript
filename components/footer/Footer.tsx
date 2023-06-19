@@ -6,6 +6,35 @@ import { BsGithub } from "react-icons/bs";
 import logo from "./../../assets/logo.png";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { Tooltip } from "react-tooltip";
+
+const socialMenu = [
+  {
+    name: "Facebook",
+    icon: <RiFacebookFill />,
+    link: "https://www.facebook.com/sakilahmed009",
+    id: "facebook",
+  },
+  {
+    name: "Twitter",
+    icon: <AiOutlineTwitter />,
+    link: "https://twitter.com/MDSAKIL58063252",
+    id: "twitter",
+  },
+  {
+    name: "Linkedin",
+    icon: <FaLinkedinIn />,
+    link: "https://www.linkedin.com/in/sakil-ahmed007/",
+    id: "linkedin",
+  },
+  {
+    name: "Github",
+    icon: <BsGithub />,
+    link: "https://github.com/sakil-ahmed",
+    id: "github",
+  },
+];
+
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -25,21 +54,21 @@ const Footer = () => {
             </a>
           </div>
           <div className="footer__social__icons">
-            <a href="https://www.facebook.com/sakilahmed009" target="_blank">
-              <RiFacebookFill />
-            </a>
-            <a href="https://twitter.com/MDSAKIL58063252" target="_blank">
-              <AiOutlineTwitter />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sakil-ahmed007/"
-              target="_blank"
-            >
-              <FaLinkedinIn />
-            </a>
-            <a href="https://github.com/sakil-ahmed" target="_blank">
-              <BsGithub />
-            </a>
+            {socialMenu.map(({ icon, id, link, name }) => {
+              return (
+                <div key={id}>
+                  <a
+                    data-tooltip-id={id}
+                    data-tooltip-content={name}
+                    href={link}
+                    target="_blank"
+                  >
+                    {icon}
+                  </a>
+                  <Tooltip id={id} />
+                </div>
+              );
+            })}
           </div>
           <div className="copyright__text">
             <p>{t("copyrighttext")}</p>

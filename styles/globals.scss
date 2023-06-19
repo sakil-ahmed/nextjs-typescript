@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
 @import "./Variables";
 
@@ -137,14 +141,13 @@ h6 {
   }
 }
 
-.Dropdown-option, .Dropdown-placeholder{
+.Dropdown-option,
+.Dropdown-placeholder {
   text-transform: uppercase;
 }
-.marquee-container{
+.marquee-container {
   overflow-x: unset !important;
-  &::-webkit-scrollbar{
-    height:0;
+  &::-webkit-scrollbar {
+    height: 0;
   }
 }
-
-

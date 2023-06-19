@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, stagger } from "framer-motion";
+import { motion} from "framer-motion";
 import AnimatedLetters from "../AnimatedLetters/index";
 import Image, { StaticImageData } from "next/image";
 import { animationFade } from "../Animation/Motion";
@@ -35,14 +35,18 @@ const Skills = () => {
         </div>
         <div className="technologies_container">
           {skillsData.map(({ id, img, text }: techdata) => {
+          
             return (
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{
+                  // @ts-ignore
                   type: "spring",
+                  // @ts-ignore
                   Bounce: 0.25,
+                  // @ts-ignore
                   duration: 1,
                   delay: 0.1 * id,
                 }}
