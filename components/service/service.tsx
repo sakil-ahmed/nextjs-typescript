@@ -35,13 +35,13 @@ const Service = () => {
     <section className="service section" id="service">
       <div className="content_wrap line">
         <SectionTitle text="Check Services" />
-        <motion.h2 {...animationFade("bottom", 100)} className="service_title">
+        {/* <motion.h2 {...animationFade("bottom", 100)} className="service_title">
           <AnimatedLetters
             letterClass={letterClass}
             strArray={textArrayname}
             idx={15}
           />
-        </motion.h2>
+        </motion.h2> */}
         <motion.p {...animationFade("bottom", 100)} className="work-interest">
           I have a strong desire to work with companies that leverage
           cutting-edge technologies like React, Node.js, and Typescript. My
