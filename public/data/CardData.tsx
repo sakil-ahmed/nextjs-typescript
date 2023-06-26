@@ -15,6 +15,10 @@ import tailwindcss from "./../../assets/tailwind.png";
 import figma from "./../../assets/figma.png";
 import github from "./../../assets/github.png";
 import git from "./../../assets/git.png";
+import { RiFacebookFill } from "react-icons/ri";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
 
 export const card = [
   {
@@ -135,5 +139,30 @@ export const serviceCard = [
     title: "Design to HTML",
     description:
       "I convert existing designs into pixel-perfect HTML/CSSwebsites.",
+  },
+];
+
+// social links data
+export const socialLinks = [
+  {
+    id: 1,
+    icon: <RiFacebookFill />,
+    link: "https://www.facebook.com/sakilahmed009",
+  },
+  {
+    id: 2,
+
+    icon: <AiOutlineTwitter />,
+    link: "https://twitter.com/MDSAKIL58063252",
+  },
+  {
+    id: 3,
+    icon: <FaLinkedinIn />,
+    link: "https://www.linkedin.com/in/sakil-ahmed007/",
+  },
+  {
+    id: 4,
+    icon: <BsGithub />,
+    link: "https://github.com/sakil-ahmed",
   },
 ];

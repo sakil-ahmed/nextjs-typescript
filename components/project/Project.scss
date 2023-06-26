@@ -3,13 +3,13 @@
 .portfolio {
   position: relative;
   padding: 100px 0;
-  border-bottom: 1px solid #ebebeb;
 
   .title {
     font-size: 60px;
     line-height: 70px;
     text-align: center;
     margin-bottom: 20px;
+    color: #fff;
     @media ($phone_max) {
       font-size: 40px;
       line-height: 60px;
@@ -21,13 +21,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding-top: 20px;
   }
   .project__btns {
     text-align: center;
     margin-top: 40px;
     a {
-      background: $btnColor;
-      color: $white;
+      background: rgb(114, 226, 174);
+      color: #000;
       display: inline-block;
       font-weight: 600;
       padding: 15px 45px;
@@ -42,8 +43,8 @@
       text-decoration: none;
       &:hover {
         background: transparent;
-        color: $btnColor;
-        border: 1px solid $btnColor;
+        color: rgb(114, 226, 174);
+        border: 1px solid rgb(114, 226, 174);
       }
     }
   }

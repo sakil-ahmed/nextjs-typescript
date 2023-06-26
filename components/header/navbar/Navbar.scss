@@ -19,10 +19,11 @@
       margin: 0 10px;
       font-size: 18px;
       display: block;
-      color: $titleColor;
+      color: $white;
       font-weight: 500;
       position: relative;
       cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       @media ($tablet_max) {
         color: $white;
       }
@@ -33,13 +34,23 @@
         bottom: 0;
         width: 0;
         height: 2px;
-        background-color: $black;
+        background-color: rgb(114, 226, 174);
         transition: 0.3s;
       }
-      &:hover::after {
-        width: 100%;
-        left: 0;
+      &:hover {
+        color: rgb(114, 226, 174);
+        &::after {
+          width: 100%;
+          left: 0;
+        }
       }
     }
+  }
+}
+
+.active_menu {
+  color: rgb(114, 226, 174) !important;
+  &::after {
+    width: 100% !important;
   }
 }

@@ -17,9 +17,6 @@ const Contact = () => {
     <section className="contact" id="contact">
       <div className="container">
         <div className="row line">
-          <div className="visible__rotate__text">
-            <h1>Contat Me</h1>
-          </div>
           <div className="from__wraper">
             <motion.h2
               {...animationFade("bottom", 100)}

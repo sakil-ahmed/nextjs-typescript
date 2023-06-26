@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import image from "./../../assets/code-slash.svg";
 import Image from "next/image";
-import { serviceCard } from "./../../public/data/CardData";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SectionTitle from "../sectionTitle/SectionTitle";
 import { motion } from "framer-motion";
 import { animationFade } from "../Animation/Motion";
 import AnimatedLetters from "../AnimatedLetters";
+import { serviceCard } from "@/public/data/CardData";
 gsap.registerPlugin(ScrollTrigger);
 
 const Service = () => {

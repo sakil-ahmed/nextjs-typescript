@@ -70,32 +70,32 @@ h6 {
   isolation: isolate;
 }
 
-.line::after,
-.line::before {
-  @media ($desktop_min) {
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    content: "";
-    background: #ebebeb;
-    z-index: 11;
-  }
-}
+// .line::after,
+// .line::before {
+//   @media ($desktop_min) {
+//     position: absolute;
+//     width: 1px;
+//     height: 100%;
+//     content: "";
+//     background: #ebebeb;
+//     z-index: 11;
+//   }
+// }
 
-.line::before {
-  left: 30px;
-  top: 0;
-  @media (min-width: 1200px) {
-    left: 100px;
-  }
-}
-.line::after {
-  right: 30px;
-  top: 0;
-  @media (min-width: 1200px) {
-    right: 100px;
-  }
-}
+// .line::before {
+//   left: 30px;
+//   top: 0;
+//   @media (min-width: 1200px) {
+//     left: 100px;
+//   }
+// }
+// .line::after {
+//   right: 30px;
+//   top: 0;
+//   @media (min-width: 1200px) {
+//     right: 100px;
+//   }
+// }
 
 .container__fluid {
   width: 100%;
@@ -116,8 +116,8 @@ h6 {
 *******************/
 
 .btn {
-  background: $btnColor;
-  color: $white;
+  background: rgb(114, 226, 174);
+  color: #000;
   display: inline-block;
   font-weight: $SemiBold;
   padding: 15px 45px;
@@ -132,7 +132,57 @@ h6 {
   cursor: pointer;
   &:hover {
     background: transparent;
-    color: $btnColor;
-    border: 1px solid $btnColor;
+    color: rgb(114, 226, 174);
+    border: 1px solid rgb(114, 226, 174);
   }
+}
+
+.bg-grey {
+  background-color: rgb(15 23 42);
+}
+.blurredBg {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("https://tf-react-bieber.vercel.app/images/body-bg.png");
+    background-size: cover;
+  }
+}
+
+.bg-grey {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+.backdrop-filter {
+  backdrop-filter: blur(16px);
+}
+
+::selection {
+  background-color: rgb(114, 226, 174);
+  color: rgb(15, 23, 42);
+}
+
+// animated_header
+.animated_header {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  background-color: rgba(15, 23, 42, 0.7);
+  transition: all 0.6s ease-in-out;
+}
+.show_header {
+  top: 0;
 }

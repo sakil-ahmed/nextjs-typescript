@@ -1,10 +1,22 @@
 @import "./../../styles/Variables";
 
+.root_tech_item {
+  width: 170px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  @media (max-width: 992px) {
+    flex: 0 0 87px;
+    height: 87px;
+  }
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
 .skills {
   position: relative;
-  padding: 100px 0;
+  padding: 50px 0;
   overflow: hidden;
-  border-bottom: 1px solid #ebebeb;
   @media ($phone_max) {
     padding: 50px 0;
   }
@@ -47,12 +59,14 @@
     line-height: 70px;
     text-align: center;
     margin-bottom: 20px;
+    color: #fff;
     @media ($phone_max) {
       font-size: 40px;
       line-height: 60px;
     }
   }
   .technologies_container {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
@@ -64,7 +78,7 @@
       margin-top: 30px;
     }
     .tech_item {
-      background-color: rgb(23, 28, 35);
+      background-color: rgb(255, 255, 255, 0.05);
       border-radius: 2rem;
       display: flex;
       align-items: center;
@@ -73,12 +87,13 @@
       flex: 0 0 170px;
       height: 170px;
       gap: 0.7rem;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       @media (max-width: 992px) {
         flex: 0 0 87px;
         height: 87px;
         gap: 0.3rem;
       }
+
       &_img {
         width: 70px;
         height: 70px;

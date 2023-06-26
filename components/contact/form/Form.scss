@@ -11,6 +11,7 @@ form {
       font-weight: $Regular;
       font-size: 15px;
       line-height: 160%;
+      color: #fff;
     }
     input,
     textarea {
@@ -19,6 +20,7 @@ form {
       outline: none;
       border: 1px solid hsla(225, 8%, 62%, 0.48);
       background: transparent;
+      color: $white;
     }
     input {
       width: 100%;
@@ -68,8 +70,8 @@ form {
       margin-top: 16px;
     }
     .btn {
-      background: $btnColor;
-      color: $white;
+      background: rgb(114, 226, 174);
+      color: #000;
       display: inline-block;
       font-weight: 600;
       padding: 15px 45px;
@@ -91,8 +93,8 @@ form {
       }
       &:hover {
         background: transparent;
-        color: $btnColor;
-        border: 1px solid $btnColor;
+        color: rgb(114, 226, 174);
+        border: 1px solid rgb(114, 226, 174);
       }
     }
     .text {
@@ -100,6 +102,7 @@ form {
     }
     .phone,
     .email {
+      color: #fff;
       display: flex;
       align-items: center;
       margin-bottom: 5px;
@@ -111,9 +114,9 @@ form {
         align-items: center;
         justify-content: center;
         margin-right: 5px;
-        background: rgba(229, 84, 10, 0.2);
-        color: #e5540a;
-        border: 1px solid #e5540a;
+        background: rgba(114, 226, 174, 0.2);
+        color: rgb(114, 226, 174);
+        border: 1px solid rgb(114, 226, 174);
       }
     }
   }

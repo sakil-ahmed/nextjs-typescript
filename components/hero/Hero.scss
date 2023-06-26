@@ -3,7 +3,6 @@
   position: relative;
   padding: 50px 0;
   overflow: hidden;
-  border-bottom: 1px solid #ebebeb;
 
   @media ($desktop_max) {
     padding: 0;
@@ -22,7 +21,7 @@
     h1 {
       font-size: 150px;
       letter-spacing: 5px;
-      color: $PrimaryHeading;
+      color: rgb(250, 250, 250, 0.1);
       line-height: 200px;
       text-transform: uppercase;
       @media ($desktop_max) {
@@ -46,7 +45,7 @@
         font-size: 70px;
         line-height: 80px;
         margin: 10px 0 25px;
-        color: $titleColor;
+        color: rgba(255, 255, 255);
         @media (max-width: 1122px) {
           font-size: 60px;
         }
@@ -96,7 +95,7 @@
             top: 13px;
             width: 100px;
             height: 1px;
-            background: #202020;
+            background: rgb(114, 226, 174);
             content: "";
           }
         }
@@ -111,7 +110,7 @@
       }
 
       img {
-        border: 4px solid #000;
+        border: 4px solid rgb(114, 226, 174);
         max-width: 100%;
         margin-left: auto;
         animation: profile__image 10s ease-in-out infinite 0.3s;
